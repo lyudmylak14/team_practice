@@ -67,9 +67,7 @@
 // 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
 // 4) n = 12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
 
-
 // Create a function that checks if a number n is divisible by two numbers x AND y.All inputs are positive, non - zero numbers.
-
 
 // const num = (n, x, y) => {
 //     return n % x === 0 && n % y === 0;
@@ -83,9 +81,7 @@
 
 // console.log(num(100, 1, 7));
 
-
 // TODO  ======= 5 =======
-
 
 // "scissors", "paper" --> "Player 1 won!"
 // "scissors", "rock" --> "Player 2 won!"
@@ -106,3 +102,113 @@
 // };
 
 // console.log(rockScissorsPaper("rock", "Rock"));
+
+// TODO  ======= 6 =======
+
+// Digital root is the recursive sum of all the digits in a number.
+
+// Given n, take the sum of the digits of n.If that value has more than one digit,
+//  continue reducing in this way until a single - digit number is produced.
+//  The input will be a non - negative integer.
+
+// function digitalRoot(n) {
+//     while (n >= 10) {
+//         n = Array.from(String(n), Number).reduce((sum, digit) => sum + digit, 0);
+//     }
+//     return n;
+// }
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor(settings) {
+//     super(settings.email);
+//     this.access = settings.access;
+//   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//     this.blacklistedEmails = []; // Додана властивість для зберігання чорного списку поштових адрес
+//   }
+
+//   // Публічний метод для додавання пошти у чорний список
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
+
+//   // Публічний метод для перевірки пошти у чорному списку
+//   isBlacklisted(email) {
+//     return this.blacklistedEmails.includes(email);
+//   }
+// }
+
+// class StringBuilder {
+//     #value;
+
+//     constructor(initialValue) {
+//         this.#value = initialValue;
+//     }
+
+//     getValue() {
+//         return this.#value;
+//     }
+
+//     padEnd(str) {
+//         this.#value += str;
+//     }
+
+//     padStart(str) {
+//         this.#value = str + this.#value;
+//     }
+
+//     padBoth(str) {
+//         this.#value = str + this.#value + str;
+//     }
+// }
+
+// const user = {
+//   name: "Jacques Gluke",
+//   tag: "jgluke",
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const { name, tag: newTag = "aaAaa", stats } = user;
+// console.log(name); // Jacques Gluke
+// // console.log(tag); // jgluke
+// console.log(newTag);
+// console.log(stats); //
+// console.log(newName);
